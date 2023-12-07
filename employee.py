@@ -62,20 +62,22 @@ robbie = MonthlyEmployee('Robbie', 2000)
 ariel = ContractEmployee('Ariel', 120, 30)
 
 # Test the calculations and output
-print(billie.get_pay())  # 4000
-print(str(billie))  # "Billie works on a monthly salary of 4000. Their total pay is 4000."
+assert billie.get_pay() == 4000
+assert str(billie) == "Billie works on a monthly salary of 4000. Their total pay is 4000."
 
-print(charlie.get_pay())  # 2500
-print(str(charlie))  # "Charlie works on a contract of 100 hours at 25/hour. Their total pay is 2500."
+assert charlie.get_pay() == 2500
+assert str(charlie) == "Charlie works on a contract of 100 hours at 25/hour. Their total pay is 2500."
 
-print(renee.get_pay())  # 3800
-print(str(renee))  # "Renee works on a monthly salary of 3000 and receives a commission for 4 contract(s) at 200/contract. Their total pay is 3800."
+assert renee.get_pay() == 3800
+assert str(renee) == "Renee works on a monthly salary of 3000 and receives a commission for 4 contract(s) at 200/contract. Their total pay is 3800."
 
-print(jan.get_pay())  # 4410
-print(str(jan))  # "Jan works on a contract of 150 hours at 25/hour and receives a commission for 3 contract(s) at 220/contract. Their total pay is 4410."
+assert jan.get_pay() == 4410
+assert str(jan) == "Jan works on a contract of 150 hours at 25/hour and receives a commission for 3 contract(s) at 220/contract. Their total pay is 4410."
 
-print(robbie.get_pay())  # 3500
-print(str(robbie))  # "Robbie works on a monthly salary of 2000 and receives a bonus commission of 1500. Their total pay is 3500."
+assert robbie.get_pay() == 3500
+assert str(robbie) == "Robbie works on a monthly salary of 2000 and receives a bonus commission of 1500. Their total pay is 3500."
 
-print(ariel.get_pay())  # 3600
-print(str(ariel))  # "Ariel works on a contract of 120 hours at 30/hour and receives a bonus commission of 600. Their total pay is 4200."
+assert ariel.get_pay() == 4200
+assert str(ariel) == "Ariel works on a contract of 120 hours at 30/hour. Their total pay is 4200."
+
+print("All tests passed successfully!")
